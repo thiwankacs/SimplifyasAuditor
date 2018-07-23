@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE032105D663003A6079 /* ButtonBlue.swift */; };
+		00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE052105D8BC003A6079 /* ButtonLabel.swift */; };
+		00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE082105DE02003A6079 /* Roboto-Bold.ttf */; };
+		00CADE0C2105DE9E003A6079 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE0B2105DE9E003A6079 /* Roboto-Regular.ttf */; };
+		00CADE0E2105E104003A6079 /* InputFieldsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE0D2105E104003A6079 /* InputFieldsWrapper.swift */; };
+		00CADE102105E5B5003A6079 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE0F2105E5B5003A6079 /* InputField.swift */; };
 		00FED8A92105AE3D000F3D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED8A82105AE3D000F3D8A /* AppDelegate.swift */; };
 		00FED8AB2105AE3D000F3D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED8AA2105AE3D000F3D8A /* ViewController.swift */; };
 		00FED8AE2105AE3D000F3D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED8AC2105AE3D000F3D8A /* Main.storyboard */; };
 		00FED8B02105AE3E000F3D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FED8AF2105AE3E000F3D8A /* Assets.xcassets */; };
 		00FED8B32105AE3E000F3D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED8B12105AE3E000F3D8A /* LaunchScreen.storyboard */; };
+		DA73D29DBE663516997C97CB /* Pods_Simplifyas_Auditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C63B2FFEA889A94657106 /* Pods_Simplifyas_Auditor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00CADE032105D663003A6079 /* ButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlue.swift; sourceTree = "<group>"; };
+		00CADE052105D8BC003A6079 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		00CADE082105DE02003A6079 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		00CADE0B2105DE9E003A6079 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		00CADE0D2105E104003A6079 /* InputFieldsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsWrapper.swift; sourceTree = "<group>"; };
+		00CADE0F2105E5B5003A6079 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		00FED8A52105AE3D000F3D8A /* Simplifyas Auditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simplifyas Auditor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FED8A82105AE3D000F3D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FED8AA2105AE3D000F3D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,9 @@
 		00FED8AF2105AE3E000F3D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FED8B22105AE3E000F3D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FED8B42105AE3E000F3D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381C63B2FFEA889A94657106 /* Pods_Simplifyas_Auditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplifyas_Auditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9273EEBB4CCCA05F9E9A27DD /* Pods-Simplifyas Auditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifyas Auditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifyas Auditor/Pods-Simplifyas Auditor.debug.xcconfig"; sourceTree = "<group>"; };
+		C0D99004EE413C653CA483FB /* Pods-Simplifyas Auditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplifyas Auditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplifyas Auditor/Pods-Simplifyas Auditor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA73D29DBE663516997C97CB /* Pods_Simplifyas_Auditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0025C7212105B00C007A324D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				00FED8AC2105AE3D000F3D8A /* Main.storyboard */,
+				00FED8B12105AE3E000F3D8A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		00CADE022105D640003A6079 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				00CADE032105D663003A6079 /* ButtonBlue.swift */,
+				00CADE052105D8BC003A6079 /* ButtonLabel.swift */,
+				00CADE0D2105E104003A6079 /* InputFieldsWrapper.swift */,
+				00CADE0F2105E5B5003A6079 /* InputField.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		00CADE072105DDEE003A6079 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				00CADE0B2105DE9E003A6079 /* Roboto-Regular.ttf */,
+				00CADE082105DE02003A6079 /* Roboto-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		00FED89C2105AE3D000F3D8A = {
 			isa = PBXGroup;
 			children = (
 				00FED8A72105AE3D000F3D8A /* Simplifyas Auditor */,
 				00FED8A62105AE3D000F3D8A /* Products */,
+				3F8C64CACCCC132295EF6285 /* Pods */,
+				5B8FB28601CC7B1936BE5245 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +102,32 @@
 		00FED8A72105AE3D000F3D8A /* Simplifyas Auditor */ = {
 			isa = PBXGroup;
 			children = (
+				00CADE072105DDEE003A6079 /* Fonts */,
+				00CADE022105D640003A6079 /* UI Elements */,
 				00FED8A82105AE3D000F3D8A /* AppDelegate.swift */,
 				00FED8AA2105AE3D000F3D8A /* ViewController.swift */,
-				00FED8AC2105AE3D000F3D8A /* Main.storyboard */,
+				0025C7212105B00C007A324D /* Storyboards */,
 				00FED8AF2105AE3E000F3D8A /* Assets.xcassets */,
-				00FED8B12105AE3E000F3D8A /* LaunchScreen.storyboard */,
 				00FED8B42105AE3E000F3D8A /* Info.plist */,
 			);
 			path = "Simplifyas Auditor";
+			sourceTree = "<group>";
+		};
+		3F8C64CACCCC132295EF6285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9273EEBB4CCCA05F9E9A27DD /* Pods-Simplifyas Auditor.debug.xcconfig */,
+				C0D99004EE413C653CA483FB /* Pods-Simplifyas Auditor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B8FB28601CC7B1936BE5245 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				381C63B2FFEA889A94657106 /* Pods_Simplifyas_Auditor.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00FED8B72105AE3E000F3D8A /* Build configuration list for PBXNativeTarget "Simplifyas Auditor" */;
 			buildPhases = (
+				0E0DC1064324895A3942EA83 /* [CP] Check Pods Manifest.lock */,
 				00FED8A12105AE3D000F3D8A /* Sources */,
 				00FED8A22105AE3D000F3D8A /* Frameworks */,
 				00FED8A32105AE3D000F3D8A /* Resources */,
+				4625D7F1973A7164E392E653 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,19 +192,66 @@
 			files = (
 				00FED8B32105AE3E000F3D8A /* LaunchScreen.storyboard in Resources */,
 				00FED8B02105AE3E000F3D8A /* Assets.xcassets in Resources */,
+				00CADE0C2105DE9E003A6079 /* Roboto-Regular.ttf in Resources */,
+				00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */,
 				00FED8AE2105AE3D000F3D8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E0DC1064324895A3942EA83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simplifyas Auditor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4625D7F1973A7164E392E653 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Simplifyas Auditor/Pods-Simplifyas Auditor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simplifyas Auditor/Pods-Simplifyas Auditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00FED8A12105AE3D000F3D8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */,
+				00CADE0E2105E104003A6079 /* InputFieldsWrapper.swift in Sources */,
 				00FED8AB2105AE3D000F3D8A /* ViewController.swift in Sources */,
 				00FED8A92105AE3D000F3D8A /* AppDelegate.swift in Sources */,
+				00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */,
+				00CADE102105E5B5003A6079 /* InputField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,16 +393,18 @@
 		};
 		00FED8B82105AE3E000F3D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9273EEBB4CCCA05F9E9A27DD /* Pods-Simplifyas Auditor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = "Simplifyas Auditor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.simplifya.ipadapp.Simplifyas-Auditor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplifya.universal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,16 +413,18 @@
 		};
 		00FED8B92105AE3E000F3D8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D99004EE413C653CA483FB /* Pods-Simplifyas Auditor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = "Simplifyas Auditor/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.simplifya.ipadapp.Simplifyas-Auditor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simplifya.universal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

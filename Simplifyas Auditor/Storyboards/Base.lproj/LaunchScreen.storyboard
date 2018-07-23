@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simplifya" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-xC-pAO">
+                                <rect key="frame" x="62.5" y="315" width="250" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tlU-xC-pAO" secondAttribute="height" multiplier="35:8" id="3bl-eB-EVT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tlU-xC-pAO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="8:12" id="Rml-xf-1VV"/>
+                            <constraint firstItem="tlU-xC-pAO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xfk-dd-srO"/>
+                            <constraint firstItem="tlU-xC-pAO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="5:12" id="Zgd-SC-xIQ"/>
+                            <constraint firstItem="tlU-xC-pAO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="orw-dZ-qsY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Rml-xf-1VV"/>
+                                <exclude reference="Zgd-SC-xIQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Rml-xf-1VV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Zgd-SC-xIQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Simplifya" width="210" height="48"/>
+    </resources>
+</document>
