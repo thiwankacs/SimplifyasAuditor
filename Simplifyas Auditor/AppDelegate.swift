@@ -44,3 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UITableView {
+    
+    func hasRowAtIndexPath(indexPath: NSIndexPath) -> Bool {
+        return indexPath.section < self.numberOfSections && indexPath.row < self.numberOfRows(inSection: indexPath.section)
+    }
+}
+

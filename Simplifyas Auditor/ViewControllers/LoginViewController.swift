@@ -42,6 +42,8 @@ class LoginViewController: UIViewController {
     }
     */
 
+    // MARK: - Button Actions
+    
     @IBAction func btnfogetpasswordClicks(_ sender: ButtonLabel) {
         loginView.isHidden = true
         forgetPasswordView.isHidden = false
