@@ -25,6 +25,13 @@ class LoginViewController: UIViewController {
     }
     
 
+    /*override public var traitCollection: UITraitCollection {
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isPortrait {
+            return UITraitCollection(traitsFrom: [UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .regular)])
+            //return UITraitCollection(traitsFromCollections:[UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .Regular)])
+        }
+        return super.traitCollection
+    }*/
     /*
     // MARK: - Navigation
 
