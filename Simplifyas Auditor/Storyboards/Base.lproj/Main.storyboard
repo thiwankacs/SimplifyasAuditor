@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,31 +17,31 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simplifyas_Auditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Simplifyas_Auditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-RB-S67" userLabel="loginarea">
-                                <rect key="frame" x="0.0" y="192" width="375" height="303"/>
+                                <rect key="frame" x="298.5" y="214.5" width="427" height="359"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simplifya" translatesAutoresizingMaskIntoConstraints="NO" id="yUN-6h-37n">
-                                        <rect key="frame" x="94" y="0.0" width="187" height="42.5"/>
+                                        <rect key="frame" x="107.5" y="20" width="213.5" height="48.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yUN-6h-37n" secondAttribute="height" multiplier="35:8" id="e74-Yz-X3M"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X21-H6-2Bi">
-                                        <rect key="frame" x="24" y="72.5" width="327" height="218.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X21-H6-2Bi" userLabel="loginView">
+                                        <rect key="frame" x="30" y="118.5" width="367" height="220.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-hY-26E" customClass="InputFieldsWrapper" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="93"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7d-6M-yNG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="46"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-5e-HO2">
                                                                 <rect key="frame" x="6" y="8" width="30" height="30"/>
@@ -50,7 +50,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Fx-A9C" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                                <rect key="frame" x="48" y="6" width="273" height="34"/>
+                                                                <rect key="frame" x="48" y="6" width="313" height="34"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -68,14 +68,14 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reC-Mv-iOz">
-                                                        <rect key="frame" x="0.0" y="46" width="327" height="1"/>
+                                                        <rect key="frame" x="0.0" y="46" width="367" height="1"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="ue6-OZ-LLY"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-lq-67m">
-                                                        <rect key="frame" x="0.0" y="47" width="327" height="46"/>
+                                                        <rect key="frame" x="0.0" y="47" width="367" height="46"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-bp-0VA">
                                                                 <rect key="frame" x="6" y="8" width="30" height="30"/>
@@ -92,7 +92,7 @@
                                                         </constraints>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DP-TZ-n4P" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                        <rect key="frame" x="48" y="53" width="273" height="34"/>
+                                                        <rect key="frame" x="48" y="53" width="313" height="34"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -117,7 +117,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-ZT-xiS" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="41" y="108" width="245" height="49"/>
+                                                <rect key="frame" x="0.0" y="113" width="367" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="32V-A6-KlB"/>
                                                     <constraint firstAttribute="height" constant="49" id="Tiw-QU-uMz"/>
@@ -141,7 +141,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-dy-dc0" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="94" y="175" width="139" height="32"/>
+                                                <rect key="frame" x="114" y="179" width="139" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="wEL-76-YNK"/>
                                                 </constraints>
@@ -160,9 +160,11 @@
                                                         <include reference="wEL-76-YNK"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="btnfogetpasswordClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WI-bP-Syh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="2TB-ZT-xiS" firstAttribute="top" secondItem="i7L-hY-26E" secondAttribute="bottom" constant="20" id="2yd-ap-VPx"/>
                                             <constraint firstItem="i7L-hY-26E" firstAttribute="leading" secondItem="X21-H6-2Bi" secondAttribute="leading" id="56R-3n-Nm6"/>
@@ -223,20 +225,20 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-Od-Tso">
-                                        <rect key="frame" x="24" y="72.5" width="327" height="218.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-Od-Tso" userLabel="forgetPasswordView">
+                                        <rect key="frame" x="30" y="97.5" width="367" height="241.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your registered email address and instructions to reset your password will be sent to you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-YB-PvW">
-                                                <rect key="frame" x="8" y="8" width="311" height="34.5"/>
+                                                <rect key="frame" x="8" y="8" width="351" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.38431372549019605" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmd-br-SOQ" customClass="InputFieldsWrapper" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46.5" width="327" height="46"/>
+                                                <rect key="frame" x="0.0" y="67.5" width="367" height="46"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUu-T6-n1B">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="46"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="3er-NO-MTP">
                                                                 <rect key="frame" x="6" y="8" width="30" height="30"/>
@@ -245,7 +247,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67R-ss-SKV" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                                <rect key="frame" x="48" y="6" width="273" height="34"/>
+                                                                <rect key="frame" x="48" y="6" width="313" height="34"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -271,18 +273,41 @@
                                                     <constraint firstAttribute="bottom" secondItem="vUu-T6-n1B" secondAttribute="bottom" id="oyb-rx-kMc"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-yN-9DX" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="133.5" width="367" height="48"/>
+                                                <state key="normal" title="Send"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-40-45q" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
+                                                <rect key="frame" x="114" y="199.5" width="139" height="30"/>
+                                                <state key="normal" title="Back to login"/>
+                                                <connections>
+                                                    <action selector="btnfogetPasswordClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTh-ol-vSt"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Omz-40-45q" firstAttribute="top" secondItem="Lyg-yN-9DX" secondAttribute="bottom" constant="6" id="93S-Lr-q70">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="18"/>
+                                            </constraint>
+                                            <constraint firstItem="Lyg-yN-9DX" firstAttribute="centerX" secondItem="7pk-Od-Tso" secondAttribute="centerX" id="BH6-4z-b7N"/>
                                             <constraint firstAttribute="trailing" secondItem="oZb-YB-PvW" secondAttribute="trailing" constant="8" id="BvS-fb-hh9"/>
+                                            <constraint firstItem="Lyg-yN-9DX" firstAttribute="centerX" secondItem="7pk-Od-Tso" secondAttribute="centerX" id="Dcz-Hb-Cjf"/>
                                             <constraint firstItem="oZb-YB-PvW" firstAttribute="leading" secondItem="7pk-Od-Tso" secondAttribute="leading" constant="8" id="FdS-hP-IAu"/>
+                                            <constraint firstItem="Omz-40-45q" firstAttribute="centerX" secondItem="7pk-Od-Tso" secondAttribute="centerX" id="IxV-oA-s2C"/>
+                                            <constraint firstItem="Omz-40-45q" firstAttribute="top" secondItem="Lyg-yN-9DX" secondAttribute="bottom" constant="18" id="JAK-zj-zWZ"/>
                                             <constraint firstAttribute="trailing" secondItem="rmd-br-SOQ" secondAttribute="trailing" id="K9F-qr-poW"/>
+                                            <constraint firstItem="Lyg-yN-9DX" firstAttribute="top" secondItem="rmd-br-SOQ" secondAttribute="bottom" constant="15" id="KUZ-im-32c"/>
+                                            <constraint firstAttribute="bottom" secondItem="Omz-40-45q" secondAttribute="bottom" constant="12" id="QPG-Xx-ltd"/>
+                                            <constraint firstItem="Omz-40-45q" firstAttribute="centerX" secondItem="7pk-Od-Tso" secondAttribute="centerX" id="SwN-s5-twm"/>
+                                            <constraint firstAttribute="bottom" secondItem="Omz-40-45q" secondAttribute="bottom" constant="12" id="Yw1-h3-hWF"/>
+                                            <constraint firstItem="Lyg-yN-9DX" firstAttribute="top" secondItem="vUu-T6-n1B" secondAttribute="bottom" constant="20" id="aM4-Hq-a7Z"/>
                                             <constraint firstItem="oZb-YB-PvW" firstAttribute="top" secondItem="7pk-Od-Tso" secondAttribute="top" constant="8" id="bfB-pM-Bgt"/>
                                             <constraint firstAttribute="trailing" secondItem="oZb-YB-PvW" secondAttribute="trailing" constant="8" id="dL3-7p-Cd6"/>
                                             <constraint firstItem="oZb-YB-PvW" firstAttribute="leading" secondItem="7pk-Od-Tso" secondAttribute="leading" constant="8" id="efZ-qv-E5f"/>
                                             <constraint firstItem="rmd-br-SOQ" firstAttribute="leading" secondItem="7pk-Od-Tso" secondAttribute="leading" id="mdX-3o-D2p"/>
-                                            <constraint firstItem="rmd-br-SOQ" firstAttribute="top" secondItem="oZb-YB-PvW" secondAttribute="bottom" constant="4" id="sfJ-FQ-nqp"/>
-                                            <constraint firstItem="oZb-YB-PvW" firstAttribute="top" secondItem="7pk-Od-Tso" secondAttribute="top" constant="8" id="uAB-9o-8qd"/>
+                                            <constraint firstItem="rmd-br-SOQ" firstAttribute="top" secondItem="oZb-YB-PvW" secondAttribute="bottom" constant="25" id="sfJ-FQ-nqp"/>
+                                            <constraint firstItem="oZb-YB-PvW" firstAttribute="top" secondItem="7pk-Od-Tso" secondAttribute="top" id="uAB-9o-8qd"/>
                                             <constraint firstAttribute="height" constant="128" id="xfQ-Z2-a8m"/>
                                         </constraints>
                                         <variation key="default">
@@ -294,6 +319,16 @@
                                                 <exclude reference="dL3-7p-Cd6"/>
                                                 <exclude reference="efZ-qv-E5f"/>
                                                 <exclude reference="uAB-9o-8qd"/>
+                                                <exclude reference="BH6-4z-b7N"/>
+                                                <exclude reference="Dcz-Hb-Cjf"/>
+                                                <exclude reference="KUZ-im-32c"/>
+                                                <exclude reference="aM4-Hq-a7Z"/>
+                                                <exclude reference="93S-Lr-q70"/>
+                                                <exclude reference="IxV-oA-s2C"/>
+                                                <exclude reference="JAK-zj-zWZ"/>
+                                                <exclude reference="QPG-Xx-ltd"/>
+                                                <exclude reference="SwN-s5-twm"/>
+                                                <exclude reference="Yw1-h3-hWF"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -302,6 +337,11 @@
                                                 <include reference="BvS-fb-hh9"/>
                                                 <include reference="efZ-qv-E5f"/>
                                                 <include reference="uAB-9o-8qd"/>
+                                                <include reference="Dcz-Hb-Cjf"/>
+                                                <include reference="KUZ-im-32c"/>
+                                                <include reference="JAK-zj-zWZ"/>
+                                                <include reference="SwN-s5-twm"/>
+                                                <include reference="Yw1-h3-hWF"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -309,6 +349,11 @@
                                                 <include reference="FdS-hP-IAu"/>
                                                 <include reference="bfB-pM-Bgt"/>
                                                 <include reference="dL3-7p-Cd6"/>
+                                                <include reference="BH6-4z-b7N"/>
+                                                <include reference="aM4-Hq-a7Z"/>
+                                                <include reference="93S-Lr-q70"/>
+                                                <include reference="IxV-oA-s2C"/>
+                                                <include reference="QPG-Xx-ltd"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -317,6 +362,7 @@
                                     <constraint firstAttribute="bottom" secondItem="7pk-Od-Tso" secondAttribute="bottom" constant="65.5" id="0el-8z-fwK">
                                         <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
+                                    <constraint firstItem="Omz-40-45q" firstAttribute="height" secondItem="DtF-dy-dc0" secondAttribute="height" id="18w-Rd-ghD"/>
                                     <constraint firstAttribute="height" constant="320" id="3Ev-iB-Thy"/>
                                     <constraint firstAttribute="trailing" secondItem="X21-H6-2Bi" secondAttribute="trailing" constant="30" id="3LB-PT-5qx"/>
                                     <constraint firstItem="yUN-6h-37n" firstAttribute="top" secondItem="iUY-RB-S67" secondAttribute="top" constant="20" id="47J-gh-zR1"/>
@@ -327,7 +373,6 @@
                                     </constraint>
                                     <constraint firstItem="yUN-6h-37n" firstAttribute="width" secondItem="iUY-RB-S67" secondAttribute="width" multiplier="6:12" id="Ip6-wh-DEy"/>
                                     <constraint firstAttribute="bottom" secondItem="X21-H6-2Bi" secondAttribute="bottom" constant="12" id="IzB-wp-bXe"/>
-                                    <constraint firstItem="7pk-Od-Tso" firstAttribute="height" secondItem="X21-H6-2Bi" secondAttribute="height" id="KoN-bB-c0r"/>
                                     <constraint firstAttribute="bottom" secondItem="X21-H6-2Bi" secondAttribute="bottom" constant="20" id="OCa-Ki-R6u"/>
                                     <constraint firstItem="7pk-Od-Tso" firstAttribute="leading" secondItem="iUY-RB-S67" secondAttribute="leading" constant="24" id="Ocw-qj-X9N"/>
                                     <constraint firstItem="yUN-6h-37n" firstAttribute="width" secondItem="iUY-RB-S67" secondAttribute="width" multiplier="6:12" id="PZl-g9-rPE"/>
@@ -335,11 +380,14 @@
                                     <constraint firstAttribute="bottom" secondItem="7pk-Od-Tso" secondAttribute="bottom" constant="12" id="Twk-Ab-R2r"/>
                                     <constraint firstAttribute="trailing" secondItem="X21-H6-2Bi" secondAttribute="trailing" constant="24" id="V9b-A5-GeG"/>
                                     <constraint firstItem="yUN-6h-37n" firstAttribute="centerX" secondItem="iUY-RB-S67" secondAttribute="centerX" id="bpG-Wj-aSS"/>
-                                    <constraint firstItem="7pk-Od-Tso" firstAttribute="top" secondItem="yUN-6h-37n" secondAttribute="bottom" constant="30" id="bt5-bg-6zM"/>
+                                    <constraint firstItem="7pk-Od-Tso" firstAttribute="top" secondItem="yUN-6h-37n" secondAttribute="bottom" constant="18" id="bt5-bg-6zM"/>
                                     <constraint firstItem="X21-H6-2Bi" firstAttribute="top" secondItem="yUN-6h-37n" secondAttribute="bottom" constant="30" id="cTW-RB-y82"/>
+                                    <constraint firstItem="Omz-40-45q" firstAttribute="width" secondItem="DtF-dy-dc0" secondAttribute="width" id="fBV-S9-zyh"/>
                                     <constraint firstItem="yUN-6h-37n" firstAttribute="top" secondItem="iUY-RB-S67" secondAttribute="top" id="hv2-d6-uHQ"/>
                                     <constraint firstAttribute="height" constant="220" id="lIO-TG-8dZ"/>
                                     <constraint firstItem="X21-H6-2Bi" firstAttribute="top" secondItem="yUN-6h-37n" secondAttribute="bottom" constant="50" id="lYk-g1-AXm"/>
+                                    <constraint firstItem="Lyg-yN-9DX" firstAttribute="height" secondItem="2TB-ZT-xiS" secondAttribute="height" id="mjS-Fl-khm"/>
+                                    <constraint firstItem="Lyg-yN-9DX" firstAttribute="width" secondItem="2TB-ZT-xiS" secondAttribute="width" id="n4U-Tu-eDP"/>
                                     <constraint firstAttribute="trailing" secondItem="7pk-Od-Tso" secondAttribute="trailing" constant="24" id="rfV-CE-8e8"/>
                                     <constraint firstItem="X21-H6-2Bi" firstAttribute="leading" secondItem="iUY-RB-S67" secondAttribute="leading" constant="24" id="wuW-t8-Lln"/>
                                     <constraint firstItem="7pk-Od-Tso" firstAttribute="height" secondItem="X21-H6-2Bi" secondAttribute="height" id="zRc-kn-N2X"/>
@@ -352,16 +400,11 @@
                                         <exclude reference="5nG-9c-1LU"/>
                                         <exclude reference="8YS-0M-NOd"/>
                                         <exclude reference="AXg-94-xG5"/>
-                                        <exclude reference="KoN-bB-c0r"/>
                                         <exclude reference="Ocw-qj-X9N"/>
                                         <exclude reference="Twk-Ab-R2r"/>
                                         <exclude reference="bt5-bg-6zM"/>
                                         <exclude reference="rfV-CE-8e8"/>
                                         <exclude reference="zRc-kn-N2X"/>
-                                        <exclude reference="47J-gh-zR1"/>
-                                        <exclude reference="Ip6-wh-DEy"/>
-                                        <exclude reference="PZl-g9-rPE"/>
-                                        <exclude reference="hv2-d6-uHQ"/>
                                         <exclude reference="3LB-PT-5qx"/>
                                         <exclude reference="IzB-wp-bXe"/>
                                         <exclude reference="OCa-Ki-R6u"/>
@@ -370,22 +413,25 @@
                                         <exclude reference="cTW-RB-y82"/>
                                         <exclude reference="lYk-g1-AXm"/>
                                         <exclude reference="wuW-t8-Lln"/>
+                                        <exclude reference="47J-gh-zR1"/>
+                                        <exclude reference="Ip6-wh-DEy"/>
+                                        <exclude reference="PZl-g9-rPE"/>
+                                        <exclude reference="hv2-d6-uHQ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="lIO-TG-8dZ"/>
-                                        <include reference="KoN-bB-c0r"/>
                                         <include reference="Ocw-qj-X9N"/>
                                         <include reference="Twk-Ab-R2r"/>
                                         <include reference="bt5-bg-6zM"/>
                                         <include reference="rfV-CE-8e8"/>
-                                        <include reference="Ip6-wh-DEy"/>
-                                        <include reference="hv2-d6-uHQ"/>
                                         <include reference="IzB-wp-bXe"/>
                                         <include reference="V9b-A5-GeG"/>
-                                        <include reference="cTW-RB-y82"/>
+                                        <exclude reference="cTW-RB-y82"/>
                                         <include reference="wuW-t8-Lln"/>
+                                        <include reference="Ip6-wh-DEy"/>
+                                        <include reference="hv2-d6-uHQ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -394,14 +440,14 @@
                                         <include reference="0el-8z-fwK"/>
                                         <include reference="5nG-9c-1LU"/>
                                         <include reference="8YS-0M-NOd"/>
-                                        <include reference="AXg-94-xG5"/>
-                                        <include reference="zRc-kn-N2X"/>
-                                        <include reference="47J-gh-zR1"/>
-                                        <include reference="PZl-g9-rPE"/>
+                                        <exclude reference="AXg-94-xG5"/>
+                                        <exclude reference="zRc-kn-N2X"/>
                                         <include reference="3LB-PT-5qx"/>
                                         <include reference="OCa-Ki-R6u"/>
                                         <include reference="QkE-nx-iGY"/>
                                         <include reference="lYk-g1-AXm"/>
+                                        <include reference="47J-gh-zR1"/>
+                                        <include reference="PZl-g9-rPE"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -431,6 +477,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="forgetPasswordView" destination="7pk-Od-Tso" id="Le7-jy-8of"/>
+                        <outlet property="loginView" destination="X21-H6-2Bi" id="etZ-YD-OKk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

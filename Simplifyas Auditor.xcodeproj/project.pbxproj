@@ -13,6 +13,7 @@
 		00CADE0C2105DE9E003A6079 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE0B2105DE9E003A6079 /* Roboto-Regular.ttf */; };
 		00CADE0E2105E104003A6079 /* InputFieldsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE0D2105E104003A6079 /* InputFieldsWrapper.swift */; };
 		00CADE102105E5B5003A6079 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE0F2105E5B5003A6079 /* InputField.swift */; };
+		00DB54922106CF76006E56AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DB54912106CF76006E56AA /* LoginViewController.swift */; };
 		00FED8A92105AE3D000F3D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED8A82105AE3D000F3D8A /* AppDelegate.swift */; };
 		00FED8AB2105AE3D000F3D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FED8AA2105AE3D000F3D8A /* ViewController.swift */; };
 		00FED8AE2105AE3D000F3D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FED8AC2105AE3D000F3D8A /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		00CADE0B2105DE9E003A6079 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		00CADE0D2105E104003A6079 /* InputFieldsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsWrapper.swift; sourceTree = "<group>"; };
 		00CADE0F2105E5B5003A6079 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		00DB54912106CF76006E56AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00FED8A52105AE3D000F3D8A /* Simplifyas Auditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simplifyas Auditor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FED8A82105AE3D000F3D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FED8AA2105AE3D000F3D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		00DB54902106CF58006E56AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				00DB54912106CF76006E56AA /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		00FED89C2105AE3D000F3D8A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 				00CADE022105D640003A6079 /* UI Elements */,
 				00FED8A82105AE3D000F3D8A /* AppDelegate.swift */,
 				00FED8AA2105AE3D000F3D8A /* ViewController.swift */,
+				00DB54902106CF58006E56AA /* ViewControllers */,
 				0025C7212105B00C007A324D /* Storyboards */,
 				00FED8AF2105AE3E000F3D8A /* Assets.xcassets */,
 				00FED8B42105AE3E000F3D8A /* Info.plist */,
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DB54922106CF76006E56AA /* LoginViewController.swift in Sources */,
 				00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */,
 				00CADE0E2105E104003A6079 /* InputFieldsWrapper.swift in Sources */,
 				00FED8AB2105AE3D000F3D8A /* ViewController.swift in Sources */,
