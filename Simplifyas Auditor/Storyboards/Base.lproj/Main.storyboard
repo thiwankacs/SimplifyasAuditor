@@ -40,7 +40,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-hY-26E" customClass="InputFieldsWrapper" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="93"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7d-6M-yNG">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7d-6M-yNG" userLabel="Email Field">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-5e-HO2">
@@ -49,11 +49,14 @@
                                                                     <constraint firstAttribute="width" secondItem="LxQ-5e-HO2" secondAttribute="height" multiplier="1:1" id="Ppl-DR-Mb9"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Fx-A9C" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginEmailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Fx-A9C" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                                 <rect key="frame" x="48" y="6" width="273" height="34"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ci0-Yk-BI6"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,14 +70,14 @@
                                                             <constraint firstAttribute="height" constant="46" id="zT7-Qd-Ps5"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reC-Mv-iOz">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reC-Mv-iOz" userLabel="Seperator Line">
                                                         <rect key="frame" x="0.0" y="46" width="327" height="1"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="ue6-OZ-LLY"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-lq-67m">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-lq-67m" userLabel="Password Field">
                                                         <rect key="frame" x="0.0" y="47" width="327" height="46"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="DYl-bp-0VA">
@@ -95,7 +98,10 @@
                                                         <rect key="frame" x="48" y="53" width="273" height="34"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="NkP-ck-wgV"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.41568627450980389" green="0.37254901960784315" blue="0.96470588235294119" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,7 +146,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="ImF-vE-GNP" kind="show" id="c6N-jb-SEI"/>
+                                                    <action selector="btnSignInClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pp-wp-6k6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-dy-dc0" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
@@ -164,7 +170,7 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnfogetpasswordClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WI-bP-Syh"/>
+                                                    <action selector="btnfogetPasswordClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QzH-tC-Js8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -279,12 +285,15 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-yN-9DX" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                 <rect key="frame" x="41" y="120.5" width="245" height="49"/>
                                                 <state key="normal" title="Send"/>
+                                                <connections>
+                                                    <segue destination="ImF-vE-GNP" kind="show" id="EMH-eT-iKH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-40-45q" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                 <rect key="frame" x="94" y="187.5" width="139" height="32"/>
                                                 <state key="normal" title="Back to login"/>
                                                 <connections>
-                                                    <action selector="btnfogetPasswordClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTh-ol-vSt"/>
+                                                    <action selector="btnBackToLoginClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44D-aV-ssg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -481,7 +490,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnSignIn" destination="2TB-ZT-xiS" id="N5C-6v-uGt"/>
                         <outlet property="forgetPasswordView" destination="7pk-Od-Tso" id="Le7-jy-8of"/>
+                        <outlet property="loginEmailAddressField" destination="zFM-Fx-A9C" id="len-Rk-V2R"/>
+                        <outlet property="loginPasswordField" destination="4DP-TZ-n4P" id="RDi-ph-eoV"/>
                         <outlet property="loginView" destination="X21-H6-2Bi" id="etZ-YD-OKk"/>
                     </connections>
                 </viewController>

@@ -44,6 +44,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension String {
+    func localized(withComment comment: String? = nil) -> String {
+        return NSLocalizedString(self, comment: comment ?? "")
+    }
+}
+
+extension UIViewController{
+    
+    /*override public var traitCollection: UITraitCollection {
+     if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isPortrait {
+     return UITraitCollection(traitsFrom: [UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .regular)])
+     //return UITraitCollection(traitsFromCollections:[UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .Regular)])
+     }
+     return super.traitCollection
+     }*/
+    
+    func checkNetworkStatus(){
+        let network: NetworkManager = NetworkManager.sharedInstance
+        
+        network.reachability.whenReachable = { _ in
+            self.ErrorMessage(title: "title_congratulations".localized(), message: "connection_available_now".localized())
+        }
+        
+        network.reachability.whenUnreachable = {_ in
+            self.ErrorMessage(title: "title_sorry".localized(), message: "connection_unavailable_now".localized())
+        }
+    }
+    
+    func ErrorMessage(title : String, message : String){
+        let refreshAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    // MARK: - View On KeyBoard Appearence
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.size.height / 1.5)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y += (keyboardSize.size.height / 1.5)
+        }
+        }
+    }
+}
+
 extension UITableView {
     
     func hasRowAtIndexPath(indexPath: NSIndexPath) -> Bool {

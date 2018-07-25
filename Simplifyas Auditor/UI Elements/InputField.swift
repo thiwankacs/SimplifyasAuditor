@@ -14,5 +14,9 @@ import UIKit
     override func draw(_ rect: CGRect) {
         self.textColor = UIColor.black
         self.font = fontFace
+        
+        // Enables Clear Button On Text Field
+        self.clearButtonMode = .always
+        self.clearButtonMode = .whileEditing
     }
 }

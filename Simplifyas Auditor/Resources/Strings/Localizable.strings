@@ -1,0 +1,65 @@
+/* 
+  Localizable.strings
+  Simplifyas Auditor
+
+  Created by Thiwanka Nawarathne on 7/25/18.
+  Copyright © 2018 Simplifya. All rights reserved.
+*/
+
+
+"title_sorry" = "Sorry!";
+"title_congratulations" = "Congratulations!";
+"connection_unavailable_in_login" = "You must be connected to the internet to log in.";
+"connection_available_now" = "Congratulations You Are Connected.";
+"connection_unavailable_now" = "Please Check Your Internet Connection.";
+
+
+/*//Alerts
+
+//Titles
+"title_1" = "Oops!";
+"title_sorry" = "Sorry!";
+"title_3" = "Congratulations!";
+"title_4" = "Alert";
+"title_5" = "Done";
+"title_6" = "Warning!";
+"app_name" = "Simplifya";
+"audit_synced" = "Audit Synced";
+
+//Descriptions
+
+"no_internet"               = "Please check your internet connection";
+
+//login
+"empty_fields"               = "All fields are required";//update
+
+"email_incorrct"             = "Invalid email address";//update
+
+"current_email_incorrct"     = "Current Email do not match";
+
+"simulater unavailability"   = "This feature unavailable in simulater";
+
+"record_unable_to_delete"    = "Incomplete record exsist";
+
+"confermation"                = "Do you want to reset all sub questions ?";
+
+"unrecognized_respond"        ="You must be connected to the internet to log in.";
+
+"audit_unrecognized_respond"        ="You must be connected to wifi to complete this action.";
+
+"finalized"                  = "Log in on a computer to review and finalize.";
+
+"commentTV_placeholder"      = "Type your notes here...";
+
+"comment_not_found"          = "Please enter comment first";
+
+"download_details"            = "Before you can start your inspection, you must download the checklist. Tap the 'Download' button to do this.";
+
+"start_details"               = "Your checklist has been downloaded. Tap 'Start' when you are ready to begin your inspection.";
+
+"sync_edit_details"            = "If you wish to add more notes and pictures to your inspection, tap the 'Edit' button. Once you're finished with your inspection, you must sync it while you're connected to wifi.";
+
+"continue_details"             = "Tap 'Continue' to resume your inspection.";
+
+"disable_details"             = "Please select an appointment.";
+ */

@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var forgetPasswordView: UIView!
+    @IBOutlet weak var loginEmailAddressField: InputField!
+    @IBOutlet weak var loginPasswordField: InputField!
+    @IBOutlet weak var btnSignIn: ButtonBlue!
+    
+    let simplifya = Simplifya()
+    let authService = AuthService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         forgetPasswordView.isHidden = true
+        self.keychainDataToFields()
+        //self.checkNetworkStatus() // Enable This To Check Network Rechability
+        
+        // Scroll the View on keyboard Appear
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,34 +37,70 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*override public var traitCollection: UITraitCollection {
-        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isPortrait {
-            return UITraitCollection(traitsFrom: [UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .regular)])
-            //return UITraitCollection(traitsFromCollections:[UITraitCollection(horizontalSizeClass: .compact), UITraitCollection(verticalSizeClass: .Regular)])
+    func keychainDataToFields()
+    {
+        if let retrievedUserName: String = KeychainWrapper.standard.string(forKey: "UserName"){
+            self.loginEmailAddressField.text = retrievedUserName
         }
-        return super.traitCollection
-    }*/
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let retrievedAccessToken: String = KeychainWrapper.standard.string(forKey: "AccessToken"){
+            print(retrievedAccessToken)
+        }
     }
-    */
 
     // MARK: - Button Actions
     
-    @IBAction func btnfogetpasswordClicks(_ sender: ButtonLabel) {
+    @IBAction func btnSignInClicks(_ sender: ButtonBlue) {
+        if let UserName = loginEmailAddressField.text{
+            if KeychainWrapper.standard.removeObject(forKey: "UserName"){
+                KeychainWrapper.standard.set(UserName, forKey: "UserName")
+            }
+        }
+        
+        NetworkManager.isUnreachable(completed: {_ in
+            self.ErrorMessage(title: "title_sorry".localized(), message: "connection_unavailable_in_login".localized())
+        })
+        
+        NetworkManager.isReachable(completed: {_ in
+            self.authService.loginWithUserName(userName: self.loginEmailAddressField.text!, password: self.loginPasswordField.text!){
+                connectionResult in
+                if connectionResult {
+                    print("success")
+                }
+                else{
+                    print("failure")
+                }
+            }
+        })
+        
+        
+    }
+    
+    @IBAction func btnfogetPasswordClicks(_ sender: ButtonLabel) {
         loginView.isHidden = true
         forgetPasswordView.isHidden = false
     }
     
-    @IBAction func btnfogetPasswordClicks(_ sender: ButtonLabel) {
+    @IBAction func btnBackToLoginClicks(_ sender: ButtonLabel) {
         forgetPasswordView.isHidden = true
         loginView.isHidden = false
     }
     
+    // MARK: - Delegation Methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true);
+        
+        if textField.restorationIdentifier == "LoginEmailField" {
+            self.loginPasswordField.becomeFirstResponder()
+            return false
+        }
+        
+        btnSignIn.sendActions(for: .touchUpInside)
+        
+        return false;
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
