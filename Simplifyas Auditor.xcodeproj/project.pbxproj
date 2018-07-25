@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0050C9FE2106F8160072A429 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050C9FD2106F8160072A429 /* QuestionsViewController.swift */; };
 		0050CA022106FB640072A429 /* TreeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050CA012106FB640072A429 /* TreeTable.m */; };
+		0050CA07210748F60072A429 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0050CA06210748F60072A429 /* sample.json */; };
 		00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE032105D663003A6079 /* ButtonBlue.swift */; };
 		00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE052105D8BC003A6079 /* ButtonLabel.swift */; };
 		00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE082105DE02003A6079 /* Roboto-Bold.ttf */; };
@@ -29,6 +30,7 @@
 		0050C9FF2106FB620072A429 /* Simplifyas Auditor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simplifyas Auditor-Bridging-Header.h"; sourceTree = "<group>"; };
 		0050CA002106FB630072A429 /* TreeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeTable.h; sourceTree = "<group>"; };
 		0050CA012106FB640072A429 /* TreeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeTable.m; sourceTree = "<group>"; };
+		0050CA06210748F60072A429 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		00CADE032105D663003A6079 /* ButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlue.swift; sourceTree = "<group>"; };
 		00CADE052105D8BC003A6079 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		00CADE082105DE02003A6079 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				0050CA002106FB630072A429 /* TreeTable.h */,
 				0050CA012106FB640072A429 /* TreeTable.m */,
+				0050CA06210748F60072A429 /* sample.json */,
 			);
 			path = TreeTable;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				00CADE0C2105DE9E003A6079 /* Roboto-Regular.ttf in Resources */,
 				00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */,
 				00FED8AE2105AE3D000F3D8A /* Main.storyboard in Resources */,
+				0050CA07210748F60072A429 /* sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

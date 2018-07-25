@@ -20,11 +20,25 @@ class QuestionsViewController: UIViewController , UITableViewDelegate, TreeTable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let path = Bundle.main.path(forResource: "sample", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                //print(jsonResult)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>/*, let colors = jsonResult["colors"] as? [Any] */{
+                    // do stuff
+                    print(jsonResult)
+                }
+            } catch {
+                // handle error
+            }
+        }
 
         expandedItems = [[0, 5] : true, [0, 5, 0] : true, [0, 5, 0, 0]: true]
         //expandedItems = [:]
         rootItems = try! fm.contentsOfDirectory(atPath: rootPath)
-        print(rootItems)
+        
         
         let identifier = NSStringFromClass(UITableViewCell.self)
         treeView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
@@ -35,17 +49,6 @@ class QuestionsViewController: UIViewController , UITableViewDelegate, TreeTable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func filePath(fromTreeIndexPath ip: IndexPath) -> String {
         var path = rootPath
@@ -56,6 +59,7 @@ class QuestionsViewController: UIViewController , UITableViewDelegate, TreeTable
             path = (path as NSString).appendingPathComponent(items[ip[i]])
         }
         
+//        print(path)
         return path
     }
     
