@@ -25,7 +25,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         forgetPasswordView.isHidden = true
         self.keychainDataToFields()
-        //self.checkNetworkStatus() // Enable This To Check Network Rechability
+        
+        //Check Network Rechability
+        //self.checkNetworkStatus()
         
         // Scroll the View on keyboard Appear
         //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
