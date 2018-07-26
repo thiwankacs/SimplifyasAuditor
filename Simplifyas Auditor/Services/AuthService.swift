@@ -8,11 +8,12 @@
 
 import Alamofire
 import SwiftyJSON
-import SwiftKeychainWrapper
+import KeychainSwift
 
 class AuthService {
     
     let simplifya = Simplifya()
+    let keychain = KeychainSwift()
     var isLoggedIn = false
     
     func loginWithUserName(userName : String, password : String, completion : @escaping (Bool)->()) {
@@ -35,10 +36,7 @@ class AuthService {
                     
                     if !(responceData["token"] == JSON.null) {
                         if !(responceData["token"]["access_token"] == JSON.null) {
-                            if KeychainWrapper.standard.removeObject(forKey: "AccessToken")
-                            {
-                                KeychainWrapper.standard.set(responceData["token"]["access_token"].string!, forKey: "AccessToken")
-                            }
+                            self.keychain.set(responceData["token"]["access_token"].string!, forKey: "AccessToken")
                         }
                         completion(true)
                     }

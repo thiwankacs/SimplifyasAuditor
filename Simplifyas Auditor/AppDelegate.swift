@@ -63,7 +63,7 @@ extension UIViewController{
     func checkNetworkStatus(){
         let network: NetworkManager = NetworkManager.sharedInstance
         
-        network.reachability.whenReachable = { _ in
+        network.reachability.whenReachable = {_ in
             self.ErrorMessage(title: "title_congratulations".localized(), message: "connection_available_now".localized())
         }
         

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftKeychainWrapper
+import KeychainSwift
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnSignIn: ButtonBlue!
     
     let simplifya = Simplifya()
+    let keychain = KeychainSwift()
     let authService = AuthService()
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.keychainDataToFields()
         
         //Check Network Rechability
-        //self.checkNetworkStatus()
+        self.checkNetworkStatus()
         
         // Scroll the View on keyboard Appear
         //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -41,11 +42,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func keychainDataToFields()
     {
-        if let retrievedUserName: String = KeychainWrapper.standard.string(forKey: "UserName"){
+        if let retrievedUserName: String = keychain.get("UserEmail"){
             self.loginEmailAddressField.text = retrievedUserName
         }
         
-        if let retrievedAccessToken: String = KeychainWrapper.standard.string(forKey: "AccessToken"){
+        if let retrievedAccessToken: String = keychain.get("AccessToken"){
             print(retrievedAccessToken)
         }
     }
@@ -54,9 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnSignInClicks(_ sender: ButtonBlue) {
         if let UserName = loginEmailAddressField.text{
-            if KeychainWrapper.standard.removeObject(forKey: "UserName"){
-                KeychainWrapper.standard.set(UserName, forKey: "UserName")
-            }
+            keychain.set(UserName, forKey: "UserEmail")
         }
         
         NetworkManager.isUnreachable(completed: {_ in
