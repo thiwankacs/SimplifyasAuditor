@@ -71,11 +71,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
                 }
                 
                 NetworkManager.isReachable(completed: {_ in
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                    
                     self.authService.loginWithUserName(userName: self.loginEmailAddressField.text!, password: self.loginPasswordField.text!){
                         connectionResult in
                         if connectionResult {
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             print("success login")
                             self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
+                        }
+                        else{
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
                         }
                     }
                 })
@@ -97,14 +103,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
         if self.checkConnection() {
             if userActions.validateForForgetPassword(email: forgetPasswordEmailAddressField.text!){
                 NetworkManager.isReachable(completed: {_ in
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                    
                     self.authService.forgotPassword(email: self.forgetPasswordEmailAddressField.text!){
                         connectionResult in
                         if connectionResult {
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             print("success reset password")
                             self.forgetPasswordEmailAddressField.text = ""
                             //self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
                         }
                         else{
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             self.forgetPasswordEmailAddressField.text = ""
                         }
                     }
