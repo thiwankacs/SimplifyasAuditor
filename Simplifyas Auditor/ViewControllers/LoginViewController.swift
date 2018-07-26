@@ -104,6 +104,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
                             self.forgetPasswordEmailAddressField.text = ""
                             //self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
                         }
+                        else{
+                            self.forgetPasswordEmailAddressField.text = ""
+                        }
                     }
                 })
             }
