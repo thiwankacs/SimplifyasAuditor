@@ -6,13 +6,14 @@
   Copyright © 2018 Simplifya. All rights reserved.
 */
 
-
-"title_sorry" = "Sorry!";
-"title_congratulations" = "Congratulations!";
-"connection_unavailable_in_login" = "You must be connected to the internet to log in.";
-"connection_available_now" = "Congratulations You Are Connected.";
-"connection_unavailable_now" = "Please Check Your Internet Connection.";
-
+"app_name" = "Simplifya";
+"title_sorry"                               = "Sorry!";
+"title_congratulations"                     = "Congratulations!";
+"connection_unavailable_in_login"           = "You must be connected to the internet to log in.";
+"connection_available_now"                  = "Congratulations You Are Connected.";
+"connection_unavailable_now"                = "Please Check Your Internet Connection.";
+"empty_fields"                              = "All fields are required";
+"email_incorrct"                            = "Invalid email address";
 
 /*//Alerts
 

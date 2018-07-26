@@ -14,6 +14,7 @@
 		0050CA0B21085FE80072A429 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050CA0A21085FE80072A429 /* AuthService.swift */; };
 		0050CA0E210888950072A429 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050CA0D210888950072A429 /* NetworkManager.swift */; };
 		0050CA1121088CEC0072A429 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0050CA1021088CEC0072A429 /* Localizable.strings */; };
+		0088285021098928005A7230 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088284F21098928005A7230 /* UserActions.swift */; };
 		00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE032105D663003A6079 /* ButtonBlue.swift */; };
 		00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE052105D8BC003A6079 /* ButtonLabel.swift */; };
 		00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE082105DE02003A6079 /* Roboto-Bold.ttf */; };
@@ -39,6 +40,7 @@
 		0050CA0A21085FE80072A429 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0050CA0D210888950072A429 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0050CA1021088CEC0072A429 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0088284F21098928005A7230 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
 		00CADE032105D663003A6079 /* ButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlue.swift; sourceTree = "<group>"; };
 		00CADE052105D8BC003A6079 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		00CADE082105DE02003A6079 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				0050CA0A21085FE80072A429 /* AuthService.swift */,
+				0088284F21098928005A7230 /* UserActions.swift */,
 				0050CA0D210888950072A429 /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -326,6 +329,7 @@
 				00DB54922106CF76006E56AA /* LoginViewController.swift in Sources */,
 				0050CA022106FB640072A429 /* TreeTable.m in Sources */,
 				00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */,
+				0088285021098928005A7230 /* UserActions.swift in Sources */,
 				0050C9FE2106F8160072A429 /* QuestionsViewController.swift in Sources */,
 				0050CA0B21085FE80072A429 /* AuthService.swift in Sources */,
 				00CADE0E2105E104003A6079 /* InputFieldsWrapper.swift in Sources */,

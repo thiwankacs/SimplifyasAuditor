@@ -9,26 +9,32 @@
 import UIKit
 import KeychainSwift
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    
+class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDelegate, AuthServiceDelegate {
+
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var forgetPasswordView: UIView!
     @IBOutlet weak var loginEmailAddressField: InputField!
     @IBOutlet weak var loginPasswordField: InputField!
     @IBOutlet weak var btnSignIn: ButtonBlue!
+    @IBOutlet weak var forgetPasswordEmailAddressField: InputField!
+    @IBOutlet weak var btnForgetPassword: ButtonBlue!
     
     let simplifya = Simplifya()
     let keychain = KeychainSwift()
     let authService = AuthService()
+    let userActions = UserActions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userActions.delegate = self
+        authService.delegate = self
+        
         forgetPasswordView.isHidden = true
         self.keychainDataToFields()
         
         //Check Network Rechability
-        self.checkNetworkStatus()
+        //self.checkNetworkStatus()
         
         // Scroll the View on keyboard Appear
         //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -50,31 +56,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print(retrievedAccessToken)
         }
     }
+    
+//    func checkConnection(){
+//        
+//    }
 
     // MARK: - Button Actions
     
     @IBAction func btnSignInClicks(_ sender: ButtonBlue) {
-        if let UserName = loginEmailAddressField.text{
-            keychain.set(UserName, forKey: "UserEmail")
-        }
-        
-        NetworkManager.isUnreachable(completed: {_ in
-            self.ErrorMessage(title: "title_sorry".localized(), message: "connection_unavailable_in_login".localized())
-        })
-        
-        NetworkManager.isReachable(completed: {_ in
-            self.authService.loginWithUserName(userName: self.loginEmailAddressField.text!, password: self.loginPasswordField.text!){
-                connectionResult in
-                if connectionResult {
-                    print("success")
+        if self.checkConnection() {
+            if userActions.validateForLogin(email: loginEmailAddressField.text!, password: loginPasswordField.text!){
+                if let UserName = loginEmailAddressField.text{
+                    keychain.set(UserName, forKey: "UserEmail")
                 }
-                else{
-                    print("failure")
-                }
+                
+                NetworkManager.isReachable(completed: {_ in
+                    self.authService.loginWithUserName(userName: self.loginEmailAddressField.text!, password: self.loginPasswordField.text!){
+                        connectionResult in
+                        if connectionResult {
+                            print("success login")
+                            self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
+                        }
+                    }
+                })
             }
-        })
-        
-        
+        }
     }
     
     @IBAction func btnfogetPasswordClicks(_ sender: ButtonLabel) {
@@ -87,6 +93,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginView.isHidden = false
     }
     
+    @IBAction func forgetPasswordRequest(_ sender: ButtonBlue) {
+        if self.checkConnection() {
+            if userActions.validateForForgetPassword(email: forgetPasswordEmailAddressField.text!){
+                NetworkManager.isReachable(completed: {_ in
+                    self.authService.forgotPassword(email: self.forgetPasswordEmailAddressField.text!){
+                        connectionResult in
+                        if connectionResult {
+                            print("success reset password")
+                            self.forgetPasswordEmailAddressField.text = ""
+                            //self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
+                        }
+                    }
+                })
+            }
+        }
+    }
+    
     // MARK: - Delegation Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true);
@@ -96,12 +119,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         
-        btnSignIn.sendActions(for: .touchUpInside)
+        if textField.restorationIdentifier == "forgetPasswordEmailAddressField" {
+            btnForgetPassword.sendActions(for: .touchUpInside)
+            return false
+        }
+        else{
+            btnSignIn.sendActions(for: .touchUpInside)
+        }
         
         return false;
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func didProcessLoginData(title: String, message: String) {
+        self.ShowAlert(title: title, message: message)
+    }
+    
+    func didfogetpasswordProcess(title: String, message: String) {
+        self.ShowAlert(title: title, message: message)
+    }
+    
+    func didProcessCredientials(title: String, message: String) {
+        self.ShowAlert(title: title, message: message)
     }
 }

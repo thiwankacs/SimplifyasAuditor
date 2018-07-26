@@ -64,15 +64,26 @@ extension UIViewController{
         let network: NetworkManager = NetworkManager.sharedInstance
         
         network.reachability.whenReachable = {_ in
-            self.ErrorMessage(title: "title_congratulations".localized(), message: "connection_available_now".localized())
+            self.ShowAlert(title: "title_congratulations".localized(), message: "connection_available_now".localized())
         }
         
         network.reachability.whenUnreachable = {_ in
-            self.ErrorMessage(title: "title_sorry".localized(), message: "connection_unavailable_now".localized())
+            self.ShowAlert(title: "title_sorry".localized(), message: "connection_unavailable_now".localized())
         }
     }
     
-    func ErrorMessage(title : String, message : String){
+    func checkConnection() -> Bool {
+        var isReachable = true
+        
+        NetworkManager.isUnreachable(completed: {_ in
+            self.ShowAlert(title: "title_sorry".localized(), message: "connection_unavailable_in_login".localized())
+            isReachable = false
+        })
+        
+        return isReachable
+    }
+    
+    func ShowAlert(title : String, message : String){
         let refreshAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(refreshAlert, animated: true, completion: nil)

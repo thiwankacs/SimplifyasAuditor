@@ -11,7 +11,7 @@ import Foundation
 struct Simplifya {
     
     //LIVE SERVER
-    let SERVICEURL          = "https://app.simplifya.com/api/"
+    let SERVICEURL          = "http://34.211.220.152/api/"
     
     //LOGIN DETAILS
     let GRANDTYPE           = "password"
@@ -24,4 +24,7 @@ struct Simplifya {
     let INPROGRESS          = 3
     let COMPLETE            = 4
     let DISABLED            = 5
+    
+    //RegX
+    let REGEX_EMAIL = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 }

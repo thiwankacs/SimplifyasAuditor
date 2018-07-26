@@ -255,11 +255,14 @@
                                                                     <constraint firstAttribute="width" secondItem="3er-NO-MTP" secondAttribute="height" multiplier="1:1" id="R88-GX-fPo"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67R-ss-SKV" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="forgetPasswordEmailAddressField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67R-ss-SKV" customClass="InputField" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                                 <rect key="frame" x="48" y="6" width="273" height="34"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Nwi-RY-Fdk"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -282,11 +285,11 @@
                                                     <constraint firstAttribute="bottom" secondItem="vUu-T6-n1B" secondAttribute="bottom" id="oyb-rx-kMc"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-yN-9DX" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="btnForgetPassword" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-yN-9DX" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                 <rect key="frame" x="41" y="120.5" width="245" height="49"/>
                                                 <state key="normal" title="Send"/>
                                                 <connections>
-                                                    <segue destination="ImF-vE-GNP" kind="show" id="EMH-eT-iKH"/>
+                                                    <action selector="forgetPasswordRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFR-on-Zuq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-40-45q" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
@@ -490,7 +493,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnForgetPassword" destination="Lyg-yN-9DX" id="8JJ-BH-wVJ"/>
                         <outlet property="btnSignIn" destination="2TB-ZT-xiS" id="N5C-6v-uGt"/>
+                        <outlet property="forgetPasswordEmailAddressField" destination="67R-ss-SKV" id="LMn-0q-WKx"/>
                         <outlet property="forgetPasswordView" destination="7pk-Od-Tso" id="Le7-jy-8of"/>
                         <outlet property="loginEmailAddressField" destination="zFM-Fx-A9C" id="len-Rk-V2R"/>
                         <outlet property="loginPasswordField" destination="4DP-TZ-n4P" id="RDi-ph-eoV"/>
