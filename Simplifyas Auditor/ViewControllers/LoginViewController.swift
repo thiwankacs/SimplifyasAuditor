@@ -37,13 +37,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
         //self.checkNetworkStatus()
         
         // Scroll the View on keyboard Appear
-        //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        //NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        self._toggleKeyBoardBasedView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // Scroll the View on keyboard Appear
+        self._toggleKeyBoardBasedView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func _toggleKeyBoardBasedView(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func keychainDataToFields()
@@ -56,10 +65,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
             print(retrievedAccessToken)
         }
     }
-    
-//    func checkConnection(){
-//        
-//    }
 
     // MARK: - Button Actions
     
