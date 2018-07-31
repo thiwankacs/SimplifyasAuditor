@@ -115,8 +115,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
                 NetworkManager.isReachable(completed: {_ in
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
                     
+                    self.HUDShow()
+                    
                     self.authService.forgotPassword(email: self.forgetPasswordEmailAddressField.text!){
                         connectionResult in
+                        
+                        self.HUDHide()
+                        
                         if connectionResult {
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             print("success reset password")
