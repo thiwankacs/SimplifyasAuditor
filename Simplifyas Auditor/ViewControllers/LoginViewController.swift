@@ -61,8 +61,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
             self.loginEmailAddressField.text = retrievedUserName
         }
         
-        if let retrievedAccessToken: String = keychain.get("AccessToken"){
-            print(retrievedAccessToken)
+        if let _: String = keychain.get("AccessToken"){
+            //print(retrievedAccessToken)
         }
     }
 
@@ -78,8 +78,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
                 NetworkManager.isReachable(completed: {_ in
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
                     
+                    self.HUDShow()
+                    
                     self.authService.loginWithUserName(userName: self.loginEmailAddressField.text!, password: self.loginPasswordField.text!){
                         connectionResult in
+                        
+                        self.HUDHide()
+                        
                         if connectionResult {
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             print("success login")

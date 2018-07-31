@@ -14,7 +14,12 @@
 		0050CA0B21085FE80072A429 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050CA0A21085FE80072A429 /* AuthService.swift */; };
 		0050CA0E210888950072A429 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050CA0D210888950072A429 /* NetworkManager.swift */; };
 		0050CA1121088CEC0072A429 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0050CA1021088CEC0072A429 /* Localizable.strings */; };
+		007D9C69210EFCDD00C85AA1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D9C68210EFCDC00C85AA1 /* MBProgressHUD.m */; };
+		007D9C6D211012EC00C85AA1 /* anim.gif in Resources */ = {isa = PBXBuildFile; fileRef = 007D9C6C211012EC00C85AA1 /* anim.gif */; };
+		007D9C702110130B00C85AA1 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D9C6F2110130A00C85AA1 /* LoadingView.m */; };
+		007D9C742110136C00C85AA1 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D9C732110136C00C85AA1 /* UIImage+animatedGIF.m */; };
 		0088285021098928005A7230 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088284F21098928005A7230 /* UserActions.swift */; };
+		0090D9B2211040D4006C1DEE /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0090D9B1211040D4006C1DEE /* LoadingView.xib */; };
 		00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE032105D663003A6079 /* ButtonBlue.swift */; };
 		00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE052105D8BC003A6079 /* ButtonLabel.swift */; };
 		00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE082105DE02003A6079 /* Roboto-Bold.ttf */; };
@@ -40,7 +45,15 @@
 		0050CA0A21085FE80072A429 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0050CA0D210888950072A429 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0050CA1021088CEC0072A429 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		007D9C67210EFCDC00C85AA1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		007D9C68210EFCDC00C85AA1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		007D9C6C211012EC00C85AA1 /* anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anim.gif; sourceTree = "<group>"; };
+		007D9C6E2110130A00C85AA1 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		007D9C6F2110130A00C85AA1 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		007D9C722110136C00C85AA1 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		007D9C732110136C00C85AA1 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		0088284F21098928005A7230 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
+		0090D9B1211040D4006C1DEE /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		00CADE032105D663003A6079 /* ButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlue.swift; sourceTree = "<group>"; };
 		00CADE052105D8BC003A6079 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		00CADE082105DE02003A6079 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -104,6 +117,8 @@
 		0050CA1221088D000072A429 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				007D9C6B211012E300C85AA1 /* LoadingHUDAnimation */,
+				007D9C6A210EFCFE00C85AA1 /* MBProgressHUD */,
 				00CADE072105DDEE003A6079 /* Fonts */,
 				0050CA032106FBC00072A429 /* TreeTable */,
 				0050CA1321088D1C0072A429 /* Strings */,
@@ -117,6 +132,37 @@
 				0050CA1021088CEC0072A429 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		007D9C6A210EFCFE00C85AA1 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				007D9C67210EFCDC00C85AA1 /* MBProgressHUD.h */,
+				007D9C68210EFCDC00C85AA1 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		007D9C6B211012E300C85AA1 /* LoadingHUDAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				007D9C712110135B00C85AA1 /* support */,
+				007D9C6E2110130A00C85AA1 /* LoadingView.h */,
+				007D9C6F2110130A00C85AA1 /* LoadingView.m */,
+				0090D9B1211040D4006C1DEE /* LoadingView.xib */,
+				007D9C6C211012EC00C85AA1 /* anim.gif */,
+			);
+			path = LoadingHUDAnimation;
+			sourceTree = "<group>";
+		};
+		007D9C712110135B00C85AA1 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				007D9C722110136C00C85AA1 /* UIImage+animatedGIF.h */,
+				007D9C732110136C00C85AA1 /* UIImage+animatedGIF.m */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 		00CADE022105D640003A6079 /* UI Elements */ = {
@@ -263,10 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FED8B32105AE3E000F3D8A /* LaunchScreen.storyboard in Resources */,
+				007D9C6D211012EC00C85AA1 /* anim.gif in Resources */,
 				00FED8B02105AE3E000F3D8A /* Assets.xcassets in Resources */,
 				00CADE0C2105DE9E003A6079 /* Roboto-Regular.ttf in Resources */,
 				0050CA1121088CEC0072A429 /* Localizable.strings in Resources */,
 				00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */,
+				0090D9B2211040D4006C1DEE /* LoadingView.xib in Resources */,
 				00FED8AE2105AE3D000F3D8A /* Main.storyboard in Resources */,
 				0050CA07210748F60072A429 /* sample.json in Resources */,
 			);
@@ -325,9 +373,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0050CA0E210888950072A429 /* NetworkManager.swift in Sources */,
+				007D9C702110130B00C85AA1 /* LoadingView.m in Sources */,
 				0050CA09210845280072A429 /* Simplifya.swift in Sources */,
 				00DB54922106CF76006E56AA /* LoginViewController.swift in Sources */,
 				0050CA022106FB640072A429 /* TreeTable.m in Sources */,
+				007D9C742110136C00C85AA1 /* UIImage+animatedGIF.m in Sources */,
 				00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */,
 				0088285021098928005A7230 /* UserActions.swift in Sources */,
 				0050C9FE2106F8160072A429 /* QuestionsViewController.swift in Sources */,
@@ -337,6 +387,7 @@
 				00FED8A92105AE3D000F3D8A /* AppDelegate.swift in Sources */,
 				00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */,
 				00CADE102105E5B5003A6079 /* InputField.swift in Sources */,
+				007D9C69210EFCDD00C85AA1 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

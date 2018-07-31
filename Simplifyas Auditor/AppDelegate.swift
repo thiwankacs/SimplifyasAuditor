@@ -60,6 +60,32 @@ extension UIViewController{
      return super.traitCollection
      }*/
     
+    func HUDShow(){
+        var HUD : MBProgressHUD = MBProgressHUD()
+        HUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+        HUD.mode = MBProgressHUDModeCustomView
+        HUD.labelText = nil
+        HUD.labelColor = UIColor.black
+        HUD.detailsLabelText = nil
+        HUD.color = UIColor.clear
+        HUD.tag = 99999
+        self.view.addSubview(HUD)
+        
+        
+        let frame : CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let loadingView : LoadingView = LoadingView.init(frame: frame)
+        loadingView.backgroundColor = UIColor.clear
+        HUD.dimBackground = true
+        HUD.customView = loadingView
+        HUD.addSubview(loadingView)
+    }
+    
+    func HUDHide(){
+        if let viewWithTag = self.view.viewWithTag(99999) {
+            viewWithTag.removeFromSuperview()
+        }
+    }
+    
     func checkNetworkStatus(){
         let network: NetworkManager = NetworkManager.sharedInstance
         
