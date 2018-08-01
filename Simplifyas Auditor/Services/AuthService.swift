@@ -13,6 +13,8 @@ import KeychainSwift
 protocol AuthServiceDelegate {
     func didProcessCredientials(title : String, message : String)
     func didfogetpasswordProcess(title : String, message : String)
+    func showUpdateAlert(title : String, message : String, updateUrl : String)
+    func showForceUpdateAlert(title : String, message : String, updateUrl : String)
 }
 
 class AuthService {
@@ -32,33 +34,67 @@ class AuthService {
                           "client_secret" : simplifya.CLIENTSECRET
         ]
         
-        Alamofire.request(Request, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
+        
+        let headers : HTTPHeaders = [
+            "Authorization": "Bearer " + keychain.get("AccessToken")!,
+            "Accept": "application/json",
+            "Content-Type" : "application/json",
+            "appVersion" : simplifya.version(),
+            "deviceType" : simplifya.DEVICE_TYPE,
+            "User-Agent" : "Simplifya/" + simplifya.version() + " (" + simplifya.DEVICE_TYPE + ";" + simplifya.DEVICE + ")"
+        ]
+            
+        Alamofire.request(Request, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: headers).responseJSON {
             response in
-            switch response.result {
-            case .success:
-                if let jsonValue = response.result.value {
-                    let responceData = JSON(jsonValue)
-                    //print(response)
-                    
-                    if !(responceData["token"] == JSON.null) {
-                        if !(responceData["token"]["access_token"] == JSON.null) {
-                            self.keychain.set(responceData["token"]["access_token"].string!, forKey: "AccessToken")
-                        }
-                        completion(true)
-                    }
-                    else{
-                        if !(responceData["message"] == JSON.null) {
-                            self.delegate?.didProcessCredientials(title: "title_sorry".localized(), message: responceData["message"].string!)
-                        }
-                        completion(false)
-                    }
+            
+            var responceHeaders = [String:String]()
+            if let ResponceHeaders = response.response?.allHeaderFields {
+                let jsonResponceHeaders = JSON(ResponceHeaders)
+                for (key, object) in jsonResponceHeaders {
+                     responceHeaders[key] = object.stringValue
                 }
-                 
-                break
-            case .failure:
+            }
+            
+            if(responceHeaders["X-Simplifya-Message"] != nil){
+                self.delegate?.showUpdateAlert(title: "app_name".localized(), message: responceHeaders["X-Simplifya-Message"]!, updateUrl : self.simplifya.UPDATE_URL)
                 completion(false)
             }
+            else{
+                switch response.result {
+                case .success:
+                    if let jsonValue = response.result.value {
+                        let responceData = JSON(jsonValue)
+                        print(responceData)
+                        
+                        if !(responceData["token"] == JSON.null) {
+                            if !(responceData["token"]["access_token"] == JSON.null) {
+                                self.keychain.set(responceData["token"]["access_token"].string!, forKey: "AccessToken")
+                            }
+                            completion(true)
+                        }
+                        else{
+                            if !(responceData["status_code"] == JSON.null) {
+                                if(responceData["status_code"] == 426){
+                                    if !(responceData["message"] == JSON.null) {
+                                        self.delegate?.showForceUpdateAlert(title: "app_name".localized(), message: responceData["message"].string!, updateUrl: self.simplifya.UPDATE_URL)
+                                    }
+                                }else{
+                                    if !(responceData["message"] == JSON.null) {
+                                        self.delegate?.didProcessCredientials(title: "title_sorry".localized(), message: responceData["message"].string!)
+                                    }
+                                }
+                            }
+                            completion(false)
+                        }
+                    }
+                    
+                    break
+                case .failure:
+                    completion(false)
+                }
+            }
         }
+        
     }
     
     func forgotPassword(email : String, completion : @escaping (Bool)->()){
@@ -67,11 +103,12 @@ class AuthService {
         
         Alamofire.request(Request, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
+             
             switch response.result {
             case .success:
                 if let jsonValue = response.result.value{
                     let responceData = JSON(jsonValue)
-                    //print(response)
+                    
                     if !(responceData["success"] == JSON.null){
                         let successCode = Bool(responceData["success"].string!)
                         if successCode! {

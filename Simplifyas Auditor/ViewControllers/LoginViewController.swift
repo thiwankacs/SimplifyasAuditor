@@ -10,7 +10,7 @@ import UIKit
 import KeychainSwift
 
 class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDelegate, AuthServiceDelegate {
-
+    
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var forgetPasswordView: UIView!
     @IBOutlet weak var loginEmailAddressField: InputField!
@@ -87,8 +87,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
                         
                         if connectionResult {
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                            print("success login")
-                            self.ShowAlert(title: "title_congratulations".localized(), message: "Login Successfull and proceed forward.")
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "AppointmentsViewController")
+                            self.present(newViewController, animated: true, completion: nil)
                         }
                         else{
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -172,5 +173,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
     
     func didProcessCredientials(title: String, message: String) {
         self.ShowAlert(title: title, message: message)
+    }
+    
+    func showUpdateAlert(title: String, message: String, updateUrl : String) {
+        self.ShowUpdateAlert(title: title, message: message, updateUrl : updateUrl)
+    }
+    
+    func showForceUpdateAlert(title: String, message: String, updateUrl: String) {
+        self.ShowForceUpdateAlert(title: title, message: message, updateUrl: updateUrl)
     }
 }

@@ -115,6 +115,50 @@ extension UIViewController{
         present(refreshAlert, animated: true, completion: nil)
     }
     
+    func ShowUpdateAlert(title : String, message : String, updateUrl : String){
+        let refreshAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        refreshAlert.addAction(UIAlertAction(title: "Update", style: .default, handler: { action in
+            
+            if let url = URL(string: updateUrl),
+                UIApplication.shared.canOpenURL(url)
+            {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+            
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "AppointmentsViewController")
+            self.present(newViewController, animated: true, completion: nil)
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    func ShowForceUpdateAlert(title : String, message : String, updateUrl : String){
+        let refreshAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            
+            if let url = URL(string: updateUrl),
+                UIApplication.shared.canOpenURL(url)
+            {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+            
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
     // MARK: - View On KeyBoard Appearence
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {

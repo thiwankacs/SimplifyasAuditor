@@ -543,7 +543,22 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="817" y="33"/>
+            <point key="canvasLocation" x="70" y="716"/>
+        </scene>
+        <!--Appointments View Controller-->
+        <scene sceneID="YHD-v1-On6">
+            <objects>
+                <viewController storyboardIdentifier="AppointmentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1WM-Ac-EYG" customClass="AppointmentsViewController" customModule="Alamofire" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8V1-Vb-E1d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JUa-gV-3Iu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSO-Ak-4Ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="33"/>
         </scene>
     </scenes>
     <resources>
