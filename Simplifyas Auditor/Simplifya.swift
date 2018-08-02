@@ -10,6 +10,9 @@ import Foundation
 
 struct Simplifya {
     
+    let serviceName = "Simplifya"
+    let accessGroup: String? = nil
+    
     //LIVE SERVER
     let SERVICEURL          = "http://54.149.102.182/api/"
     

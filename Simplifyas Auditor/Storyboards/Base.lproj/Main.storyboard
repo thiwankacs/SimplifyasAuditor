@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-RB-S67" userLabel="loginarea">
-                                <rect key="frame" x="0.0" y="191.5" width="375" height="304"/>
+                                <rect key="frame" x="0.0" y="193.5" width="375" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simplifya" translatesAutoresizingMaskIntoConstraints="NO" id="yUN-6h-37n">
                                         <rect key="frame" x="94" y="0.0" width="187.5" height="42.5"/>
@@ -35,7 +35,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X21-H6-2Bi" userLabel="loginView">
-                                        <rect key="frame" x="24" y="73.5" width="327" height="218.5"/>
+                                        <rect key="frame" x="24" y="69.5" width="327" height="218.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-hY-26E" customClass="InputFieldsWrapper" customModule="Simplifyas_Auditor" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="93"/>
@@ -235,16 +235,16 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-Od-Tso" userLabel="forgetPasswordView">
-                                        <rect key="frame" x="24" y="60.5" width="327" height="231.5"/>
+                                        <rect key="frame" x="24" y="60.5" width="327" height="227.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your registered email address and instructions to reset your password will be sent to you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-YB-PvW">
-                                                <rect key="frame" x="8" y="0.0" width="311" height="34.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="311" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.38431372549019605" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmd-br-SOQ" customClass="InputFieldsWrapper" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="59.5" width="327" height="46"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="327" height="46"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUu-T6-n1B">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
@@ -286,14 +286,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="btnForgetPassword" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-yN-9DX" customClass="ButtonBlue" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="41" y="120.5" width="245" height="49"/>
+                                                <rect key="frame" x="41" y="116.5" width="245" height="49"/>
                                                 <state key="normal" title="Send"/>
                                                 <connections>
                                                     <action selector="forgetPasswordRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFR-on-Zuq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-40-45q" customClass="ButtonLabel" customModule="Simplifyas_Auditor" customModuleProvider="target">
-                                                <rect key="frame" x="94" y="187.5" width="139" height="32"/>
+                                                <rect key="frame" x="94" y="183.5" width="139" height="32"/>
                                                 <state key="normal" title="Back to login"/>
                                                 <connections>
                                                     <action selector="btnBackToLoginClicks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44D-aV-ssg"/>
@@ -466,29 +466,52 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTR-hq-s7a">
+                                <rect key="frame" x="165.5" y="493.5" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tTR-hq-s7a" secondAttribute="height" multiplier="1:1" id="Ggd-cA-hGj"/>
+                                    <constraint firstAttribute="width" constant="44" id="XYb-GV-oNq"/>
+                                </constraints>
+                                <state key="normal" image="TouchIcon"/>
+                                <connections>
+                                    <action selector="touchIDLoginAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mwt-lX-Imr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iUY-RB-S67" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2Gq-1m-iPy"/>
+                            <constraint firstItem="tTR-hq-s7a" firstAttribute="top" secondItem="7pk-Od-Tso" secondAttribute="bottom" constant="12" id="2Sb-hq-xDF"/>
+                            <constraint firstItem="tTR-hq-s7a" firstAttribute="top" secondItem="iUY-RB-S67" secondAttribute="bottom" id="4oI-fE-db3"/>
                             <constraint firstItem="iUY-RB-S67" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="64p-tb-PCb"/>
+                            <constraint firstItem="tTR-hq-s7a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HQe-z9-ldh"/>
                             <constraint firstItem="iUY-RB-S67" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="5:12" id="MUy-wy-tOy"/>
                             <constraint firstItem="iUY-RB-S67" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VP5-kI-EgA"/>
+                            <constraint firstItem="tTR-hq-s7a" firstAttribute="top" secondItem="iUY-RB-S67" secondAttribute="bottom" id="ZaC-I0-Q9f">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="64p-tb-PCb"/>
                                 <exclude reference="MUy-wy-tOy"/>
+                                <exclude reference="2Sb-hq-xDF"/>
+                                <exclude reference="4oI-fE-db3"/>
+                                <exclude reference="ZaC-I0-Q9f"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="64p-tb-PCb"/>
+                                <exclude reference="2Sb-hq-xDF"/>
+                                <include reference="ZaC-I0-Q9f"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
                                 <include reference="MUy-wy-tOy"/>
+                                <include reference="4oI-fE-db3"/>
                             </mask>
                         </variation>
                     </view>
@@ -500,11 +523,12 @@
                         <outlet property="loginEmailAddressField" destination="zFM-Fx-A9C" id="len-Rk-V2R"/>
                         <outlet property="loginPasswordField" destination="4DP-TZ-n4P" id="RDi-ph-eoV"/>
                         <outlet property="loginView" destination="X21-H6-2Bi" id="etZ-YD-OKk"/>
+                        <outlet property="touchIDButton" destination="tTR-hq-s7a" id="DOq-7O-CdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71.09375" y="33.3984375"/>
+            <point key="canvasLocation" x="69.599999999999994" y="32.833583208395808"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="nfI-V3-TYV">
@@ -548,7 +572,7 @@
         <!--Appointments View Controller-->
         <scene sceneID="YHD-v1-On6">
             <objects>
-                <viewController storyboardIdentifier="AppointmentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1WM-Ac-EYG" customClass="AppointmentsViewController" customModule="Alamofire" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppointmentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1WM-Ac-EYG" customClass="AppointmentsViewController" customModule="Simplifyas_Auditor" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8V1-Vb-E1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,5 +589,6 @@
         <image name="Email" width="30" height="30"/>
         <image name="Password" width="30" height="30"/>
         <image name="Simplifya" width="210" height="48"/>
+        <image name="TouchIcon" width="138" height="137"/>
     </resources>
 </document>

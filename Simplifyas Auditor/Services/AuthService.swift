@@ -8,7 +8,6 @@
 
 import Alamofire
 import SwiftyJSON
-import KeychainSwift
 
 protocol AuthServiceDelegate {
     func didProcessCredientials(title : String, message : String)
@@ -20,7 +19,6 @@ protocol AuthServiceDelegate {
 class AuthService {
     
     let simplifya = Simplifya()
-    let keychain = KeychainSwift()
     var isLoggedIn = false
     var delegate : AuthServiceDelegate?
     
@@ -36,7 +34,6 @@ class AuthService {
         
         
         let headers : HTTPHeaders = [
-            //"Authorization": "Bearer " + keychain.get("AccessToken")!,
             "Accept": "application/json",
             "Content-Type" : "application/json",
             "appVersion" : simplifya.version(),
@@ -64,11 +61,11 @@ class AuthService {
                 case .success:
                     if let jsonValue = response.result.value {
                         let responceData = JSON(jsonValue)
-                        print(responceData)
+                        //print(responceData)
                         
                         if !(responceData["token"] == JSON.null) {
                             if !(responceData["token"]["access_token"] == JSON.null) {
-                                self.keychain.set(responceData["token"]["access_token"].string!, forKey: "AccessToken")
+                                UserDefaults.standard.setValue(responceData["token"]["access_token"].string!, forKey: "AccessToken")
                             }
                             completion(true)
                         }
