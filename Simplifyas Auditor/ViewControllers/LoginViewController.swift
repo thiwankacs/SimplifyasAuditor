@@ -51,7 +51,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
         */
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateBiometricIDAuth), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        //NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,10 +100,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserActionsDel
         if #available(iOS 11.0, *) {
             switch biometricIDAuth.biometricType() {
             case .faceID:
-                touchIDButton.setImage(UIImage(named: "FaceIcon"),  for: .normal)
+                let image = UIImage(named: "FaceIcon")?.withRenderingMode(.alwaysTemplate)
+                touchIDButton.setImage(image,  for: .normal)
+                touchIDButton.tintColor = UIColor(red:0.91, green:0.91, blue:0.91, alpha:1.0)
+                touchIDButton.layer.opacity = 1
                 break
             default:
-                touchIDButton.setImage(UIImage(named: "TouchIcon"),  for: .normal)
+                let image = UIImage(named: "TouchIcon")?.withRenderingMode(.alwaysTemplate)
+                touchIDButton.setImage(image,  for: .normal)
+                touchIDButton.tintColor = UIColor(red:0.91, green:0.91, blue:0.91, alpha:1.0)
+                touchIDButton.layer.opacity = 1
                 break
             }
         } else {

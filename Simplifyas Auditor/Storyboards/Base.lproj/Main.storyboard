@@ -589,6 +589,6 @@
         <image name="Email" width="30" height="30"/>
         <image name="Password" width="30" height="30"/>
         <image name="Simplifya" width="210" height="48"/>
-        <image name="TouchIcon" width="138" height="137"/>
+        <image name="TouchIcon" width="70" height="70"/>
     </resources>
 </document>
