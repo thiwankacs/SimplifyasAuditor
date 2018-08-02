@@ -1,8 +1,9 @@
 //
 //  AppointmentsViewController.swift
-//  Alamofire
+//  Simplifyas Auditor
 //
 //  Created by Thiwanka Nawarathne on 8/1/18.
+//  Copyright © 2018 Simplifya. All rights reserved.
 //
 
 import UIKit

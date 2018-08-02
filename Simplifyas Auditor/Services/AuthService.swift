@@ -36,7 +36,7 @@ class AuthService {
         
         
         let headers : HTTPHeaders = [
-            "Authorization": "Bearer " + keychain.get("AccessToken")!,
+            //"Authorization": "Bearer " + keychain.get("AccessToken")!,
             "Accept": "application/json",
             "Content-Type" : "application/json",
             "appVersion" : simplifya.version(),

@@ -20,6 +20,9 @@
 		007D9C742110136C00C85AA1 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D9C732110136C00C85AA1 /* UIImage+animatedGIF.m */; };
 		0088285021098928005A7230 /* UserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088284F21098928005A7230 /* UserActions.swift */; };
 		0090D9B2211040D4006C1DEE /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0090D9B1211040D4006C1DEE /* LoadingView.xib */; };
+		00A6243D2111BF930042AA69 /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6243C2111BF930042AA69 /* AppointmentsViewController.swift */; };
+		00AFB0502111CD4A00EA7A24 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB04F2111CD4A00EA7A24 /* KeychainPasswordItem.swift */; };
+		00AFB0522111CD5200EA7A24 /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB0512111CD5200EA7A24 /* TouchIDAuthentication.swift */; };
 		00CADE042105D663003A6079 /* ButtonBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE032105D663003A6079 /* ButtonBlue.swift */; };
 		00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CADE052105D8BC003A6079 /* ButtonLabel.swift */; };
 		00CADE092105DE02003A6079 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00CADE082105DE02003A6079 /* Roboto-Bold.ttf */; };
@@ -54,6 +57,10 @@
 		007D9C732110136C00C85AA1 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		0088284F21098928005A7230 /* UserActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActions.swift; sourceTree = "<group>"; };
 		0090D9B1211040D4006C1DEE /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		00A6243C2111BF930042AA69 /* AppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
+		00A624402111C0930042AA69 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		00AFB04F2111CD4A00EA7A24 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainPasswordItem.swift; path = "../../../../../../../Downloads/TouchMeIn4-Final/Resources/KeychainPasswordItem.swift"; sourceTree = "<group>"; };
+		00AFB0512111CD5200EA7A24 /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDAuthentication.swift; path = "../../../../../../../Downloads/TouchMeIn4-Final/TouchMeIn4/TouchIDAuthentication.swift"; sourceTree = "<group>"; };
 		00CADE032105D663003A6079 /* ButtonBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlue.swift; sourceTree = "<group>"; };
 		00CADE052105D8BC003A6079 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		00CADE082105DE02003A6079 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -110,6 +117,8 @@
 				0050CA0A21085FE80072A429 /* AuthService.swift */,
 				0088284F21098928005A7230 /* UserActions.swift */,
 				0050CA0D210888950072A429 /* NetworkManager.swift */,
+				00AFB0512111CD5200EA7A24 /* TouchIDAuthentication.swift */,
+				00AFB04F2111CD4A00EA7A24 /* KeychainPasswordItem.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				00DB54912106CF76006E56AA /* LoginViewController.swift */,
+				00A6243C2111BF930042AA69 /* AppointmentsViewController.swift */,
 				0050C9FD2106F8160072A429 /* QuestionsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -242,6 +252,7 @@
 		5B8FB28601CC7B1936BE5245 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00A624402111C0930042AA69 /* LocalAuthentication.framework */,
 				381C63B2FFEA889A94657106 /* Pods_Simplifyas_Auditor.framework */,
 			);
 			name = Frameworks;
@@ -376,6 +387,9 @@
 				007D9C702110130B00C85AA1 /* LoadingView.m in Sources */,
 				0050CA09210845280072A429 /* Simplifya.swift in Sources */,
 				00DB54922106CF76006E56AA /* LoginViewController.swift in Sources */,
+				00AFB0522111CD5200EA7A24 /* TouchIDAuthentication.swift in Sources */,
+				00A6243D2111BF930042AA69 /* AppointmentsViewController.swift in Sources */,
+				00AFB0502111CD4A00EA7A24 /* KeychainPasswordItem.swift in Sources */,
 				0050CA022106FB640072A429 /* TreeTable.m in Sources */,
 				007D9C742110136C00C85AA1 /* UIImage+animatedGIF.m in Sources */,
 				00CADE062105D8BC003A6079 /* ButtonLabel.swift in Sources */,
